@@ -1,0 +1,12 @@
+on:
+  push:
+    branches:
+      [ main ]
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+  
+    steps:
+    - name: My first Github actions
+      run: echo {{$ secrets.PHI_API_KEY}}
